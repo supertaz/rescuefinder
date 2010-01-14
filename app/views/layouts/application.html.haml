@@ -1,0 +1,33 @@
+!!! XML
+!!!
+%html
+  %head
+    %title DEFAULT TEMPLATE - FILL ME IN!
+    %link{ :rel=>'shortcut icon', :href=>'/favicon.ico', :type=>'image/vnd.microsoft.icon'}
+    %link{ :rel=>'icon', :href=>'/favicon.ico', :type=>'image/vnd.microsoft.icon'}
+    %meta{ :name=>'keywords', :content=>'' }
+    %meta{ :name=>'description', :content=>'' }
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    /[if IE]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+  %body.styled
+    #container
+      #header
+        #identityarea
+          .nest
+            %h2 This is the identity area of the default layout
+        #usernav
+          -if current_user
+            =link_to "Edit Profile", edit_user_path(:current)
+            %i or
+            =link_to "Logout", logout_path
+          -else
+            =link_to "Login", login_path
+            %i or
+            =link_to "Create an Account", new_user_path
+      #livearea
+        =yield
+      #footer
+        .nest
+          %h1 This is the footer area of the default layout

@@ -1,0 +1,17 @@
+#content
+  .nest
+    - form_for @user_session do |f|
+      = f.error_messages
+      %p
+        = f.label :email
+        %br
+        = f.text_field :email
+      %p
+        = f.label :password, "Password"
+        %br
+        = f.password_field :password
+      %p
+        = f.submit "Submit"
+#sidebar
+  .nest
+    A sidebar would go here

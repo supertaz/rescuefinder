@@ -1,0 +1,60 @@
+@import blueprint/reset.sass
+@import blueprint
+@import partials/base.sass
+@import partials/rounded_corners.sass
+@import partials/styling.sass
+@import partials/color_boxes.sass
+
+// To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+// +blueprint
+
+body.styled
+  :background-color = !background_color
+  +base_style
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+  form
+    +blueprint-form
+  #container
+    +container
+  #header
+    +column(!blueprint_grid_columns)
+    :background-color = !background_color
+    +small_caps
+    :margin-bottom 5px
+  #identityarea
+    +column(!blueprint_grid_columns - 5)
+    :margin-top 5px
+  #usernav
+    +column(5, true)
+    +rounded-bottom(5px)
+    :background-color = !usernav_background_color
+    :text-align center
+    :padding-bottom 2px
+  #footer
+    +column(!blueprint_grid_columns)
+    :background-color = !footer_background_color
+    +rounded(7px)
+    :margin-top 10px
+    +small_caps
+  #livearea
+    +column(!blueprint_grid_columns)
+    +rounded(7px)
+    :background-color = !livearea_background_color
+  #sidebar
+    +column(6, true)
+    +small_caps
+    :background = !sidebar_background_color
+    +rounded-right(7px)
+    :height 100%
+    :min-height 100%
+  #content
+    +column(18)
+    :background = !content_background_color
+    +rounded(5px)
+  .nest
+    +safe_padding
+    +rounded(5px)

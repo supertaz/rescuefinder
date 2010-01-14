@@ -1,0 +1,13 @@
+one:
+  email: MyString
+  password: MyString
+  nickname: MyString
+  firstname: MyString
+  lastname: MyString
+
+two:
+  email: MyString
+  password: MyString
+  nickname: MyString
+  firstname: MyString
+  lastname: MyString

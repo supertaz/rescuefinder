@@ -1,0 +1,18 @@
+sqlite:
+  :adapter: sqlite
+  :database: db_populate_plugin.sqlite.db
+sqlite3:
+  :adapter: sqlite3
+  :database: db_populate_plugin.sqlite3.db
+postgresql:
+  :adapter: postgresql
+  :username: postgres
+  :password: postgres
+  :database: db_populate_plugin_test
+  :min_messages: ERROR
+mysql:
+  :adapter: mysql
+  :host: localhost
+  :username: rails
+  :password:
+  :database: db_populate_plugin_test

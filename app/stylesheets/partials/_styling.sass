@@ -1,0 +1,59 @@
+@import partials/theme.sass
+
+!background_color = !lighter_base_color
+!header_background_color = !lighter_base_color
+!usernav_background_color = #fff
+!footer_background_color = !usernav_background_color
+
+// livearea includes #content and #sidebar
+!livearea_background_color = !usernav_background_color
+!content_background_color = !usernav_background_color
+!sidebar_background_color = !usernav_background_color
+!divider_color = "lightgray"
+
+=base_style
+  :font-family Georgia, Times New Roman, Times, serif
+  :font-size 10pt
+  h1
+    :font-size 3em
+  h2
+    :font-size 2.5em
+  h3
+    :font-size 2.2em
+  h4
+    :font-size 2em
+  h5
+    :font-size 1.75em
+  h6
+    :font-size 1.5em
+
+=small_caps
+  :font-variant small-caps
+
+=safe_padding
+  +safe_padding_vertical
+  +safe_padding_horizontal
+
+=safe_padding_vertical
+  +safe_padding_top
+  +safe_padding_bottom
+
+=safe_padding_horizontal
+  +safe_padding_left
+  +safe_padding_right
+
+=safe_padding_left
+  :padding-left 8px
+
+=safe_padding_right
+  :padding-right 8px
+
+=safe_padding_top
+  :padding-top 3px
+
+=safe_padding_bottom
+  :padding-bottom 3px
+
+=box
+  :padding 1em
+  :margin-bottom 1em
