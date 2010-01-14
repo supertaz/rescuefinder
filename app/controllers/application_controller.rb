@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password
 
   helper_method :current_user
+  helper_method :page_title
 
 private
 
@@ -14,6 +15,10 @@ private
   def current_user
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.record
+  end
+
+  def page_title(new_title)
+    render :partial => 'common/set_page_title', :locals => {:new_title => new_title}
   end
 
 end
