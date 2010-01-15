@@ -21,6 +21,7 @@ Rails::Initializer.run do |config|
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :version => '>=2.3.11'
   config.gem 'authlogic', :version => '>=2.1.2'
   config.gem 'paperclip'
+  config.gem 'formtastic'
 
   config.time_zone = 'UTC'
 
