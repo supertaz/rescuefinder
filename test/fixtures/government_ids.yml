@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  countrycode: MyString
+  idtype: MyString
+  identifier: MyString
+
+two:
+  countrycode: MyString
+  idtype: MyString
+  identifier: MyString
