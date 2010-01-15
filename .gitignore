@@ -1,3 +1,4 @@
+.idea
 coverage/*
 log/*.log
 log/*.pid
@@ -11,3 +12,4 @@ doc/app
 config/database.yml
 coverage/*
 .dotest/*
+app/stylesheets/.sass-cache
