@@ -1,16 +1,17 @@
-- title "New User Session"
+- page_title 'Log in to your account'
 
 - form_for @user_session do |f|
   = f.error_messages
-  %p
-    = f.label :email
-    %br
-    = f.text_field :email
-  %p
-    = f.label :password
-    %br
-    = f.text_field :password
-  %p
-    = f.submit "Submit"
+  %dl
+    %dt
+      = f.label :email
+    %dd
+      = f.text_field :email
+    %dt
+      = f.label :password
+    %dd
+      = f.text_field :password
+    %dt
+      = f.submit "Submit"
 
 
