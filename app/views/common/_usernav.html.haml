@@ -1,0 +1,10 @@
+-unless yield :usernav
+  -content_for :usernav do
+    -if current_user
+      =link_to "Edit Profile", edit_user_path(:current)
+      %i or
+      =link_to "Logout", logout_path
+    -else
+      =link_to "Login", login_path
+      %i or
+      =link_to "Create an Account", new_user_path

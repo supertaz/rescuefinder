@@ -1,5 +1,6 @@
 !!! XML
 !!!
+-render :partial => 'common/page_setup'
 %html
   %head
     %title
@@ -18,15 +19,9 @@
   %body.styled
     #container
       #header
-        #usernav
-          -if current_user
-            =link_to "Edit Profile", edit_user_path(:current)
-            %i or
-            =link_to "Logout", logout_path
-          -else
-            =link_to "Login", login_path
-            %i or
-            =link_to "Create an Account", new_user_path
+        -if yield :usernav
+          #usernav
+            =yield :usernav
         #identityarea
           .nest
             = image_tag 'help.png', :alt => 'RescueFinder', :title => 'RescueFinder'
