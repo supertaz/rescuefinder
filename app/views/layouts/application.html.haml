@@ -34,4 +34,7 @@
             =yield :sidebar
       #footer
         .nest
-          %h1 This is the footer area of the default layout
+          %center
+            Design and all contents of this website &copy; 2010#{DateTime::now().year == 2010 ? '' : " - #{DateTime::now().year}"} Jonathan D. Mischo and Elad Meidar.  All rights reserved.
+      .version{:style => 'font-size:.6em;color:#000;padding-bottom:2px;padding-right:2px;padding-top:1em;float:right'}
+        RescueFinder v.#{APP_VERSION}
