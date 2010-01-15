@@ -1,18 +1,3 @@
-- form_for @user do |f|
-  = f.error_messages
-  %dl
-    %dt
-      = f.label :email
-    %dd
-      = f.text_field :email
-    %dt
-      = f.label :password, "Password"
-    %dd
-      = f.password_field :password
-    %dt
-      = f.label :password_confirmation, "Confirm Password"
-    %dd
-      = f.password_field :password_confirmation
-  = f.submit "Submit"
-  
-
+- semantic_form_for @user do |f|
+  = f.inputs
+  = f.buttons
