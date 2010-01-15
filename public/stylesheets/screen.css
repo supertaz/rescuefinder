@@ -195,9 +195,7 @@ body.styled {
     font-size: 1.2em; }
   /* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
   body.styled form input.text, body.styled form input.title, body.styled form input[type=text] {
-    margin: 0.5em 0;
-    background-color: #fff;
-    padding: 5px; }
+    background-color: #fff;}
   /* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
   body.styled form input.title {
     font-size: 1.5em; }
@@ -258,7 +256,6 @@ body.styled {
 		height:110px;
 		vertical-align:bottom;
 		float:left;
-		border:1px solid black;
 		margin-right:10px;
 	}
 	
@@ -266,7 +263,7 @@ body.styled {
 		font-size:80px;
 		font-family:Verdana, arial, sans-serif;
 		font-weight:bolder;
-		padding-top:10px;
+		text-align:center;
 	}
 	
   /* line 101, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
@@ -376,3 +373,42 @@ body.styled {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px; }
+
+
+/* Elad's extensions */
+
+form {
+	font-size:25px;
+	padding:20px;
+	text-align:center;
+	padding-left:80px;
+}
+
+input {
+	font-size: 24px;
+	padding:5px;
+}
+
+input {
+	width:380px;
+}
+.clear {
+	clear:both;
+}
+
+dl {
+	
+}
+
+dl dt {
+	float:left; 
+	font-weight:bold; 
+	padding:5px;  
+	width:200px; 
+	text-align:left;
+}
+
+dl dd {
+	margin:2px 0; 
+	padding:5px 0;
+}
