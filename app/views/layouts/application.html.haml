@@ -18,9 +18,6 @@
   %body.styled
     #container
       #header
-        #identityarea
-          .nest
-            %h2 This is the identity area of the default layout
         #usernav
           -if current_user
             =link_to "Edit Profile", edit_user_path(:current)
@@ -30,6 +27,10 @@
             =link_to "Login", login_path
             %i or
             =link_to "Create an Account", new_user_path
+        #identityarea
+          .nest
+            = image_tag 'elad.png'
+            %h2 RescueFinder
       #livearea
         #content
           =yield

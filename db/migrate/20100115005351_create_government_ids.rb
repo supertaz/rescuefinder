@@ -9,7 +9,7 @@ class CreateGovernmentIds < ActiveRecord::Migration
       t.timestamps
     end
     add_index :government_ids, [:countrycode, :idtype, :identifier, :relative_id], :name => 'by_ccode_idtyp_ident_rid'
-    add_index :government_ids, [:relative_id, :countrycode, :idtype, :identifier], :name => 'by_rid_ccode_idtyp_iden'
+    add_index :government_ids, [:relative_id, :countrycode, :idtype, :identifier], :name => 'by_rid_ccode_idtyp_iden'ra
   end
 
   def self.down

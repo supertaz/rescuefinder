@@ -72,7 +72,7 @@ a img {
 
 /* line 10, ../../app/stylesheets/screen.sass */
 body.styled {
-  background-color: #55aadd;
+	background: #0082ca url(../images/cloudtop.jpg) left top repeat-x;
   font-family: Georgia, Times New Roman, Times, serif;
   font-size: 10pt; }
   /* line 15, ../../app/stylesheets/partials/_styling.sass */
@@ -248,12 +248,30 @@ body.styled {
     float: left;
     margin-right: 10px;
     width: 950px;
-    background-color: #55aadd;
     font-variant: small-caps;
-    margin-bottom: 5px; }
-    /* line 101, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-    * html body.styled #header {
-      overflow-x: hidden; }
+    margin-bottom: 5px; 
+		height:150px;
+		}
+
+	body.styled #header img {
+		width: 110px;
+		height:110px;
+		vertical-align:bottom;
+		float:left;
+		border:1px solid black;
+		margin-right:10px;
+	}
+	
+	body.styled #header h2 {
+		font-size:80px;
+		font-family:Verdana, arial, sans-serif;
+		font-weight:bolder;
+		padding-top:10px;
+	}
+	
+  /* line 101, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+  * html body.styled #header {
+    overflow-x: hidden; }
   /* line 27, ../../app/stylesheets/screen.sass */
   body.styled #identityarea {
     display: inline;
@@ -267,9 +285,9 @@ body.styled {
   /* line 30, ../../app/stylesheets/screen.sass */
   body.styled #usernav {
     display: inline;
-    float: left;
+    float: right;
     margin-right: 0;
-    width: 190px;
+    width: 250px;
     border-bottom-right-radius: 5px;
     -moz-border-radius-bottomright: 5px;
     -webkit-border-bottom-right-radius: 5px;
@@ -278,7 +296,14 @@ body.styled {
     -webkit-border-bottom-left-radius: 5px;
     background-color: white;
     text-align: center;
-    padding-bottom: 2px; }
+		font-family: Verdana, arial, sans-serif;
+    padding-bottom: 5px; 
+		font-size:16px;
+		border-style:solid;
+		border-color:#036;
+		border-width:7px;
+		border-top:0;}
+		
     /* line 101, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html body.styled #usernav {
       overflow-x: hidden; }
