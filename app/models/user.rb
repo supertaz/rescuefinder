@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
 
   has_many :relatives
 
+  has_many :addresses
 end
