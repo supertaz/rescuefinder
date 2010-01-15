@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem 'authlogic', :version => '>=2.1.2'
   config.gem 'paperclip'
   config.gem 'formtastic'
+  config.gem 'validation_reflection', :version => '>=0.3.5' 
 
   config.time_zone = 'UTC'
 
