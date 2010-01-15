@@ -17,7 +17,7 @@ class CreateAddresses < ActiveRecord::Migration
     add_index :addresses, :id
     add_index :addresses, :relative_id
     add_index :addresses, [:countrycode, :streetnumber, :unitnumber]
-    add_index :addresses, [:countrycode, :locality, :streetnumber, :unitnumber]
+    add_index :addresses, [:countrycode, :locality, :streetnumber, :unitnumber], :name => 'by_ccode_loc_snum_unum'
     add_index :addresses, [:countrycode, :postcode]
     add_index :addresses, [:countrycode, :state, :county]
     add_index :addresses, [:countrycode, :county]

@@ -4,7 +4,7 @@ class CreateRelatives < ActiveRecord::Migration
       t.integer :user_id
       t.string :givenname
       t.string :familyname
-      t.int :age
+      t.integer :age
       t.integer :height
       t.string :height_unit
       t.datetime :birthdate
@@ -20,7 +20,7 @@ class CreateRelatives < ActiveRecord::Migration
     end
     add_index :relatives, [:id, :familyname, :givenname]
     add_index :relatives, [:familyname, :givenname, :age, :id]
-    add_index :relatives, [:employer_or_school, :givenname, :familyname, :id]
+    add_index :relatives, [:employer_or_school, :givenname, :familyname, :id], :name => 'by_emp_gname_fname_id'
   end
   
   def self.down

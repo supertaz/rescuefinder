@@ -1,7 +1,7 @@
 class CreateTraits < ActiveRecord::Migration
   def self.up
     create_table :traits do |t|
-      t.int :trait_type_id
+      t.integer :trait_type_id
       t.string :description
       t.integer :relative_id 
       t.timestamps
