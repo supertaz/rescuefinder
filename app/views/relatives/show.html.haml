@@ -1,0 +1,39 @@
+- title "Relative"
+
+%p
+  %strong Givenname:
+  =h @relative.givenname
+%p
+  %strong Familyname:
+  =h @relative.familyname
+%p
+  %strong Age:
+  =h @relative.age
+%p
+  %strong Birthdate:
+  =h @relative.birthdate
+%p
+  %strong Student:
+  =h @relative.student
+%p
+  %strong Occupation:
+  =h @relative.occupation
+%p
+  %strong Employer Or School:
+  =h @relative.employer_or_school
+%p
+  %strong Photo File Name:
+  =h @relative.photo_file_name
+%p
+  %strong Photo Content Type:
+  =h @relative.photo_content_type
+%p
+  %strong Photo File Size:
+  =h @relative.photo_file_size
+
+%p
+  = link_to "Edit", edit_relative_path(@relative)
+  |
+  = link_to "Destroy", @relative, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", relatives_path

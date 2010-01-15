@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  trait_type_id: 
+  description: MyString
+
+two:
+  trait_type_id: 
+  description: MyString

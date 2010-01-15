@@ -1,0 +1,31 @@
+- title "Relatives"
+
+%table
+  %tr
+    %th Givenname
+    %th Familyname
+    %th Age
+    %th Birthdate
+    %th Student
+    %th Occupation
+    %th Employer or school
+    %th Photo file name
+    %th Photo content type
+    %th Photo file size
+  - for relative in @relatives
+    %tr
+      %td= h relative.givenname
+      %td= h relative.familyname
+      %td= h relative.age
+      %td= h relative.birthdate
+      %td= h relative.student
+      %td= h relative.occupation
+      %td= h relative.employer_or_school
+      %td= h relative.photo_file_name
+      %td= h relative.photo_content_type
+      %td= h relative.photo_file_size
+      %td= link_to 'Show', relative
+      %td= link_to 'Edit', edit_relative_path(relative)
+      %td= link_to 'Destroy', relative, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Relative", new_relative_path

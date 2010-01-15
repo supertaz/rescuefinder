@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   acts_as_authorized_user
   acts_as_authorizable
 
+  has_many :relatives
+
 end

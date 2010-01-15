@@ -12,7 +12,6 @@ class CreateUsers < ActiveRecord::Migration
       t.datetime  :last_login_at
       t.string    :current_login_ip
       t.string    :last_login_ip
-      t.string    :nickname
       t.string    :firstname
       t.string    :lastname
       t.timestamps

@@ -18,9 +18,9 @@ STORE_LOCATION_METHOD = :store_location
 
 Rails::Initializer.run do |config|
 
-  config.gem 'rubyist-aasm', :lib => 'aasm', :source => 'http://gems.github.com'
-  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :version => '>=2.3.11', :source => 'http://gems.github.com'
+  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :version => '>=2.3.11'
   config.gem 'authlogic', :version => '>=2.1.2'
+  config.gem 'paperclip'
 
   config.time_zone = 'UTC'
 

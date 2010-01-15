@@ -1,0 +1,44 @@
+- form_for @relative do |f|
+  = f.error_messages
+  %p
+    = f.label :givenname
+    %br
+    = f.text_field :givenname
+  %p
+    = f.label :familyname
+    %br
+    = f.text_field :familyname
+  %p
+    = f.label :age
+    %br
+    = f.text_field :age
+  %p
+    = f.label :birthdate
+    %br
+    = f.datetime_select :birthdate
+  %p
+    = f.label :student
+    %br
+    = f.check_box :student
+  %p
+    = f.label :occupation
+    %br
+    = f.text_field :occupation
+  %p
+    = f.label :employer_or_school
+    %br
+    = f.text_field :employer_or_school
+  %p
+    = f.label :photo_file_name
+    %br
+    = f.text_field :photo_file_name
+  %p
+    = f.label :photo_content_type
+    %br
+    = f.text_field :photo_content_type
+  %p
+    = f.label :photo_file_size
+    %br
+    = f.text_field :photo_file_size
+  %p
+    = f.submit "Submit"
