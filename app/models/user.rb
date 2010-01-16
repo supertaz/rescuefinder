@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
   acts_as_authorizable
 
   has_many :relatives
-
-  has_many :addresses
+  has_many :addresses, :as => :addressable, :dependent => :destroy
+  has_many :phone_numbers, :as => :phoneable, :dependent => :destroy
 
   validates_presence_of :firstname, :lastname, :email
   validates_length_of :firstname, :lastname, :in => 2..64

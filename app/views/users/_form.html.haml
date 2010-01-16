@@ -1,8 +1,16 @@
+-content_for :sidebar do
+  %h3 Registration steps
+  %ol
+    %li.current Create your account
+    %li Tell us how to reach you
+    %li Verify your account
+    %li Tell us who you're looking for
 - semantic_form_for @user do |f|
   - f.inputs do
-    = f.input :firstname, :label => 'First name', :hint => 'Your own name, up to 64 characters'
-    = f.input :lastname, :label => 'Last name', :hint => 'Up to 64 characters'
+    = f.input :firstname, :label => 'Given name', :hint => 'Your given name, up to 64 characters'
+    = f.input :lastname, :label => 'Family name', :hint => 'Your family name, up to 64 characters'
     = f.input :email, :hint => 'Example: johndoe@rescuefinder.info'
     = f.input :password, :required => controller.action_name == 'new', :hint => '4 or more characters; should include letters, numbers, and symbols'
     = f.input :password_confirmation, :label => 'Confirm password', :required => controller.action_name == 'new'
-  = f.buttons
+  - f.buttons do
+    =f.submit 'Create Your Account'

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  phonetype_id: 1
+  phonenumber: MyString
+  phoneable_id: 1
+  phoneable_type: MyString
+
+two:
+  phonetype_id: 1
+  phonenumber: MyString
+  phoneable_id: 1
+  phoneable_type: MyString

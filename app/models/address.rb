@@ -1,3 +1,3 @@
 class Address < ActiveRecord::Base
-  belongs_to :relative
+  belongs_to :addressable, :polymorphic => true
 end

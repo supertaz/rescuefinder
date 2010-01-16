@@ -2,7 +2,8 @@ class Relative < ActiveRecord::Base
 
   belongs_to :user
 
-  has_many :addresses
+  has_many :addresses, :as => :addressable, :dependent => :destroy
+  has_many :phone_numbers, :as => :phoneable, :dependent => :destroy
   has_many :government_ids
   has_many :traits
 
