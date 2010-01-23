@@ -9,7 +9,31 @@ form.formtastic fieldset ol li p.inline-hints { color:#333; }
 
 --------------------------------------------------------------------------------------------------*/
 
-form.formtastic fieldset ol li p.inline-hints
-{
-    font-style: italic;
+form.formtastic fieldset.inputs,  form.formtastic fieldset.buttons{
+	margin:30px;
+}
+form.formtastic fieldset.buttons {
+	padding-left:0px;
+}
+form.formtastic fieldset.inputs{
+	border: 6px solid #aaa;
+}
+
+form.formtastic fieldset {
+	font-size:15px;
+}
+
+form.formtastic {
+	font-family: Verdana, tahoma, sans-serif;
+}
+
+form.formtastic fieldset label {
+	text-align:left;
+	margin-right:7px;
+}
+
+form.formtastic fieldset ol li.password input, form.formtastic fieldset ol li.string input {
+	width:400px;
+	padding:5px;
+	border:1px solid black;
 }
