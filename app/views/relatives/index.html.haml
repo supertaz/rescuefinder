@@ -1,9 +1,9 @@
-- page_title "Relatives"
+- page_title "Missing persons"
 
 %table
   %tr
-    %th Givenname
     %th Familyname
+    %th Givenname
     %th Age
     %th Birthdate
     %th Student
@@ -14,8 +14,8 @@
     %th Photo file size
   - for relative in @relatives
     %tr
-      %td= h relative.givenname
       %td= h relative.familyname
+      %td= h relative.givenname
       %td= h relative.age
       %td= h relative.birthdate
       %td= h relative.student
@@ -24,8 +24,8 @@
       %td= h relative.photo_file_name
       %td= h relative.photo_content_type
       %td= h relative.photo_file_size
-      %td= link_to 'Show', relative
-      %td= link_to 'Edit', edit_relative_path(relative)
-      %td= link_to 'Destroy', relative, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'View profile', relative
+      %td= link_to 'Edit profile', edit_relative_path(relative)
+      %td= link_to 'Remove profile', relative, :confirm => 'Are you sure?', :method => :delete
 
-%p= link_to "New Relative", new_relative_path
+%p= link_to "Add a missing person", new_relative_path
