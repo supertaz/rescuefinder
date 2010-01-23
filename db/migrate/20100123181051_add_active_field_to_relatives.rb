@@ -2,7 +2,7 @@ class AddActiveFieldToRelatives < ActiveRecord::Migration
   def self.up
     add_column :relatives, :active, :boolean, :null => false, :default => true
     add_index :relatives, [:id, :familyname, :givenname, :active]
-    add_index :relatives, [:active, :familyname, :givenname, :age, :id]
+    add_index :relatives, [:active, :familyname, :givenname, :age, :id], :name => 'by_act_fname_gname_age_id'
     add_index :relatives, [:active, :employer_or_school, :givenname, :familyname, :id], :name => 'by_act_emp_gname_fname_id'
     remove_index :relatives, [:id, :familyname, :givenname]
   end
