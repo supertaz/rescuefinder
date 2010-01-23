@@ -1,12 +1,12 @@
 class AddUserstateToUsers < ActiveRecord::Migration
   def self.up
-    add_column :users, :userstate, :string
+    add_column :users, :userstate, :string, :null => false, :default => 'signup'
     add_column :users, :active, :boolean, :null => false, :default => true
-    add_column :users, :relative_count, :integer
-    add_column :users, :found_count, :integer
-    add_column :users, :update_count, :integer
-    add_column :users, :message_count, :integer
-    add_column :users, :unread_count, :integer
+    add_column :users, :relative_count, :integer, :null => false, :default => 0
+    add_column :users, :found_count, :integer, :null => false, :default => 0
+    add_column :users, :update_count, :integer, :null => false, :default => 0
+    add_column :users, :message_count, :integer, :null => false, :default => 0
+    add_column :users, :unread_count, :integer, :null => false, :default => 0
     add_column :users, :missing_last_updated_at, :datetime
   end
 
