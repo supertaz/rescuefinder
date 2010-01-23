@@ -14,6 +14,7 @@ form.formtastic fieldset.inputs,  form.formtastic fieldset.buttons{
 }
 form.formtastic fieldset.buttons {
 	padding-left:0px;
+	border:0;
 }
 form.formtastic fieldset.inputs{
 	border: 6px solid #aaa;
@@ -36,4 +37,11 @@ form.formtastic fieldset ol li.password input, form.formtastic fieldset ol li.st
 	width:400px;
 	padding:5px;
 	border:1px solid black;
+}
+
+form.formtastic fieldset .inline-hints {
+	text-align:left;
+	font-size:14px;
+	padding-left:21px;
+	padding-bottom:10px;
 }
