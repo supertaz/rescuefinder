@@ -1,16 +1,17 @@
--if current_user && current_user.activated?
-  -content_for :sidebar
-    .messages
-      Your messages
-      .total_messages
-        #{current_user.message_count} total
-      .unread_messages
-        #{current_user.unread_message_count} unread
-    .missing_people
-      Your people
-      .listed_people
-        #{current_user.relative_count} missing
-      .found_people
-        #{current_user.found_count} found
-      .updated_people
-        #{current_user.update_count} updates
+-unless yield :user_snapshot
+  -if current_user && current_user.activated?
+    -content_for :user_snapshot do
+      .messages
+        Your messages
+        .total_messages
+          #{current_user.message_count} total
+        .unread_messages
+          #{current_user.unread_count} unread
+      .missing_people
+        Your people
+        .listed_people
+          #{current_user.relative_count} missing
+        .found_people
+          #{current_user.found_count} found
+        .updated_people
+          #{current_user.update_count} updates

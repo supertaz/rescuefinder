@@ -10,5 +10,6 @@ Fields with a star are required.  Please fill in as much information as you know
     = f.input :employer_or_school
     = f.input :photo, :as => :file, :hint => 'You can add additional photos later; a face shot is the most useful'
     = f.input :description
+    This is where we'll put the stuff for traits (birthmarks, scars, tattoos, piercings, etc.)
   -f.buttons do
     = f.submit controller.action_name == 'new' ? 'Add information' : 'Save changes'

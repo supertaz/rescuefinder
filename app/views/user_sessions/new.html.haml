@@ -1,17 +1,8 @@
 - page_title 'Log in to your account'
 
-- form_for @user_session do |f|
-  = f.error_messages
-  %dl
-    %dt
-      = f.label :email
-    %dd
-      = f.text_field :email
-    %dt
-      = f.label :password
-    %dd
-      = f.text_field :password
-    %dt
-      = f.submit "Submit"
-
-
+- semantic_form_for @user_session do |f|
+  -f.inputs do
+    =f.input :email
+    =f.input :password
+  -f.buttons do
+    = f.submit "Log in"

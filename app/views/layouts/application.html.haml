@@ -30,6 +30,8 @@
         #content
           =yield
         #sidebar
+          -if yield :user_snapshot
+            =yield :user_snapshot
           -if yield :sidebar
             =yield :sidebar
       #footer
