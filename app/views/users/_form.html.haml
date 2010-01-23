@@ -16,4 +16,4 @@
     = f.input :password, :required => controller.action_name == 'new', :hint => '4 or more characters; should include letters, numbers, and symbols'
     = f.input :password_confirmation, :label => 'Confirm password', :required => controller.action_name == 'new'
   - f.buttons do
-    =f.submit 'Create Your Account'
+    =f.submit controller.action_name == 'new' ? 'Create account' : 'Save changes'
