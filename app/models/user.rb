@@ -14,4 +14,10 @@ class User < ActiveRecord::Base
   validates_length_of :firstname, :lastname, :in => 2..64
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates_uniqueness_of :email
+
+  def activated?
+    # This is very different from the active attribute, which is a magic column for AuthLogic and allows us to disable an account
+    # TODO: should use a statemachine on userstate attribute to determine the user's stage in activation and creation of records for missing persons
+    true
+  end
 end

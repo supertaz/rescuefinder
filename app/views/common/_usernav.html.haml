@@ -4,6 +4,9 @@
       =link_to "Edit Profile", edit_user_path(:current)
       %i or
       =link_to "Logout", logout_path
+      -if !current_user.missing_last_updated_at.nil? && current_user.last_login_at < current_user.missing_last_updated_at
+        %br
+        You have new updates since your last login!
     -else
       =link_to "Login", login_path
       %i or

@@ -1,6 +1,6 @@
 class Relative < ActiveRecord::Base
 
-  belongs_to :user
+  belongs_to :user, :counter_cache => true, :touch => :missing_last_updated_at
 
   has_many :addresses, :as => :addressable, :dependent => :destroy
   has_many :phone_numbers, :as => :phoneable, :dependent => :destroy
