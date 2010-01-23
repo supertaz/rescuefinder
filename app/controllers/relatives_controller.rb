@@ -13,6 +13,8 @@ class RelativesController < ApplicationController
   
   def create
     @relative = Relative.new(params[:relative])
+    @relative.student = nil if params[:relative][:student] == 'Not sure'
+    @relative.user = current_user
     if @relative.save
       flash[:notice] = "Successfully created relative."
       redirect_to @relative
@@ -28,6 +30,10 @@ class RelativesController < ApplicationController
   def update
     @relative = Relative.find(params[:id])
     if @relative.update_attributes(params[:relative])
+      if params[:relative][:student] == 'Not sure'
+        @relative.student = nil
+        @relative.save
+      end
       flash[:notice] = "Successfully updated relative."
       redirect_to @relative
     else
