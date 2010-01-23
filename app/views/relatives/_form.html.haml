@@ -1,44 +1,13 @@
-- form_for @relative do |f|
-  = f.error_messages
-  %p
-    = f.label :givenname
-    %br
-    = f.text_field :givenname
-  %p
-    = f.label :familyname
-    %br
-    = f.text_field :familyname
-  %p
-    = f.label :age
-    %br
-    = f.text_field :age
-  %p
-    = f.label :birthdate
-    %br
-    = f.datetime_select :birthdate
-  %p
-    = f.label :student
-    %br
-    = f.check_box :student
-  %p
-    = f.label :occupation
-    %br
-    = f.text_field :occupation
-  %p
-    = f.label :employer_or_school
-    %br
-    = f.text_field :employer_or_school
-  %p
-    = f.label :photo_file_name
-    %br
-    = f.text_field :photo_file_name
-  %p
-    = f.label :photo_content_type
-    %br
-    = f.text_field :photo_content_type
-  %p
-    = f.label :photo_file_size
-    %br
-    = f.text_field :photo_file_size
-  %p
-    = f.submit "Submit"
+- semantic_form_for @relative do |f|
+  -f.inputs do
+    = f.input :givenname, :label => 'Given name', :hint => 'This person\'s given or first name, up to 64 characters'
+    = f.input :familyname, :label => 'Family name', :hint => 'This person\'s family or last name, up to 64 characters'
+    = f.input :age
+    = f.input :birthdate, :start_year => 1900, :end_year => Time.zone.now.year, :as => :date
+    = f.input :student, :label => 'Is this person a student?', :as => :radio, :collection => [['Yes', true],['No', false],['Not sure']]
+    = f.input :occupation, :label => 'Occupation or major', :hint => 'Please indicate grade level here if this person is below college/university'
+    = f.input :employer_or_school
+    = f.input :photo, :as => :file, :hint => 'You can add additional photos later; a face shot is the most useful'
+    = f.input :description
+  -f.buttons do
+    = f.submit controller.action_name == 'new' ? 'Add information' : 'Save changes'

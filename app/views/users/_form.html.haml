@@ -7,8 +7,8 @@
     %li Tell us who you're looking for
 - semantic_form_for @user do |f|
   - f.inputs do
-    = f.input :firstname, :label => 'Given name', :hint => 'Your given name, up to 64 characters'
-    = f.input :lastname, :label => 'Family name', :hint => 'Your family name, up to 64 characters'
+    = f.input :firstname, :label => 'Given name', :hint => 'Your given or first name, up to 64 characters'
+    = f.input :lastname, :label => 'Family name', :hint => 'Your family or last name, up to 64 characters'
     = f.input :email, :hint => 'Example: johndoe@rescuefinder.info'
     = f.input :password, :required => controller.action_name == 'new', :hint => '4 or more characters; should include letters, numbers, and symbols'
     = f.input :password_confirmation, :label => 'Confirm password', :required => controller.action_name == 'new'

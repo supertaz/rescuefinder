@@ -16,6 +16,8 @@ class Relative < ActiveRecord::Base
                             :huge => '800x800'
                     }
 
-  attr_accessible :givenname, :familyname, :age, :birthdate, :student, :occupation, :employer_or_school, :photo_file_name, :photo_content_type, :photo_file_size
+  attr_accessible :givenname, :familyname, :age, :birthdate, :student, :occupation, :employer_or_school
 
+  validates_presence_of       :givenname, :familyname
+  validates_length_of         :givenname, :familyname, :within => 2..64
 end
