@@ -20,10 +20,15 @@ form.formtastic fieldset.inputs{
 	border: 6px solid #aaa;
 }
 
-form.formtastic fieldset {
+form.formtastic fieldset,  form.formtastic fieldset legend{
 	font-size:15px;
 }
 
+form.formtastic fieldset legend span{
+	display:block;
+	width: 25%;
+	text-align:left;
+}
 form.formtastic {
 	font-family: Verdana, tahoma, sans-serif;
 }
@@ -33,15 +38,29 @@ form.formtastic fieldset label {
 	margin-right:7px;
 }
 
-form.formtastic fieldset ol li.password input, form.formtastic fieldset ol li.string input {
+form.formtastic fieldset ol li select {
+	margin-left:21px;
+	margin-top:-8px;
+}
+form.formtastic fieldset ol li input[type=text],  form.formtastic fieldset ol li.text textarea{
 	width:400px;
 	padding:5px;
 	border:1px solid black;
 }
 
+form.formtastic fieldset ol li input[type=radio] {
+	margin-left:21px;
+	vertical-align:top;
+}
 form.formtastic fieldset .inline-hints {
 	text-align:left;
 	font-size:14px;
 	padding-left:21px;
 	padding-bottom:10px;
+}
+
+form.formtastic fieldset fieldset {
+	border:none;
+	padding:0px;
+	
 }
