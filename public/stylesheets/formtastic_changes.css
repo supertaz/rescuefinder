@@ -42,7 +42,9 @@ form.formtastic fieldset ol li select {
 	margin-left:21px;
 	margin-top:-8px;
 }
-form.formtastic fieldset ol li input[type=text],  form.formtastic fieldset ol li.text textarea{
+form.formtastic fieldset ol li input[type=text],
+form.formtastic fieldset ol li.text textarea,
+form.formtastic fieldset ol li input[type=password]{
 	width:400px;
 	padding:5px;
 	border:1px solid black;
