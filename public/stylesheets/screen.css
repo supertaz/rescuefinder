@@ -385,13 +385,18 @@ form {
 }
 
 input {
-	font-size: 24px;
-	padding:5px;
+	width:auto;
 }
 
-input {
-	width:380px;
+.help {
+	background: #9CF url(../images/question.png) 5px 9px no-repeat;
+	margin:15px;
+	padding:10px;
+	padding-left: 60px;
+	font-size:16px;
+	font-family:Verdana, arial, sans-serif;
 }
+
 .clear {
 	clear:both;
 }
