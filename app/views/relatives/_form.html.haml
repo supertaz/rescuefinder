@@ -10,7 +10,7 @@
     = f.input :occupation, :label => 'Occupation or major', :hint => 'Please indicate grade level here if this person is a student below college/university level'
     = f.input :employer_or_school
     = f.input :photo, :as => :file, :hint => 'You can add additional photos later; a face shot is the most useful'
-    = f.input :description
+    = f.input :description, :hint => 'Please tell us everything you can about this person\'s physical description; birthmarks, scars, tattoos, and piercings should be described in the section below'
     TODO: This is where we'll put the stuff for traits (birthmarks, scars, tattoos, piercings, etc.)...this is NOT a hint
   -f.buttons do
     = submit_button controller.action_name == 'new' ? 'Add information' : 'Save changes'
