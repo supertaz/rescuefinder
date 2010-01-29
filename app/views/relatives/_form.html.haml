@@ -6,12 +6,34 @@
     = f.input :familyname, :label => 'Family name', :hint => 'This person\'s family or last name, up to 64 characters'
     = f.input :age
     = f.input :birthdate, :start_year => 1900, :end_year => Time.zone.now.year, :as => :date
-    = f.input :student, :label => 'Educational Status', :hint => 'Is this person a student?', :as => :radio, :collection => [['Yes', true],['No', false],['Not sure']], :selected => @relative.student.nil? ? 'Not sure' : @relative.student?
+    = f.input :height
+    = f.input :height_unit, :as => :radio, :collection => [['Centimeters', 'cm'],['Inches', 'in']]
+    = f.input :student, :label => 'Student Status', :hint => 'Is this person a student?', :as => :radio, :collection => [['Student', true],['Not a student', false],['I\'m not sure']], :selected => @relative.student.nil? ? 'I\'m not sure' : @relative.student?
     = f.input :occupation, :label => 'Occupation or major', :hint => 'Please indicate grade level here if this person is a student below college/university level'
     = f.input :employer_or_school
     = f.input :photo, :as => :file, :hint => 'You can add additional photos later; a face shot is the most useful'
-    = f.input :description, :hint => 'Please tell us everything you can about this person\'s physical description; birthmarks, scars, tattoos, and piercings should be described in the section below'
-    TODO: This is where we'll put the stuff for traits (birthmarks, scars, tattoos, piercings, etc.)...this is NOT a hint
+    = f.input :description, :hint => 'Please tell us everything you can about this person\'s physical description; birthmarks, scars, tattoos, and piercings should be described in the \'Identifying Marks\' section below'
+    .addrs
+      %h3 Recent Addresses
+      -f.semantic_fields_for :addresses do |addrs_form|
+        =render :partial => 'address', :locals => {:form => addrs_form}
+      %a{:href => '#', :rel => 'add_new_addr_form'}Add an address
+    .phones
+      %h3 Phone Numbers
+      -f.semantic_fields_for :phone_numbers do |phones_form|
+        =render :partial => 'phone_number', :locals => {:form => phones_form}
+      %a{:href => '#', :rel => 'add_new_phone_form'}Add a phone number
+    .govtids
+      %h3 Government IDs
+      -f.semantic_fields_for :government_ids do |govtids_form|
+        =render :partial => 'government_id', :locals => {:form => govtids_form}
+      %a{:href => '#', :rel => 'add_new_govtid_form'}Add a government ID
+    .traits
+      %h3 Identifying Marks
+      Use this to tell us about birthmarks, scars, tattoos, and piercings that may make it easier to identify this person
+      -f.semantic_fields_for :traits do |traits_form|
+        =render :partial => 'trait', :locals => {:form => traits_form}
+      %a{:href => '#', :rel => 'add_new_trait_form'}Add an identifying mark
   -f.buttons do
     = submit_button controller.action_name == 'new' ? 'Add information' : 'Save changes'
     or 
